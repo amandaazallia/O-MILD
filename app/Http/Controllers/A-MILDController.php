@@ -25,8 +25,6 @@ class A-MILDController extends Controller {
 	public function create()
 	{
 		//
-		$data = \App\Cerita::all();
-		return view('buku/add')->withData($data);
 	}
 
 	/**
@@ -36,12 +34,7 @@ class A-MILDController extends Controller {
 	 */
 	public function store()
 	{
-		$addnew = new \App\Cerita;
-		$addnew->title = Input::get('title');
-		$addnew->contents = Input::get('contents');
-		$addnew->save();
-
-		return redirect(url('buku'));
+		
 		//
 	}
 
